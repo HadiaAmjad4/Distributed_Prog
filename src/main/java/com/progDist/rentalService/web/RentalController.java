@@ -40,7 +40,7 @@ public class RentalController {
     }
 
     @PutMapping("/{plateNumber}/rent")
-    public boolean rentCar(@PathVariable String plateNumber) {
-        return rentalService.rentCar(plateNumber);
+    public boolean rentCar(@PathVariable String plateNumber, @RequestBody Dates period) {
+        return rentalService.rentCar(plateNumber, period);
     }
 }

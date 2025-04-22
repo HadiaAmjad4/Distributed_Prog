@@ -36,7 +36,7 @@ public class RentalService {
         return cars.removeIf(car -> car.getPlateNumber().equalsIgnoreCase(plateNumber));
     }
 
-    public boolean rentCar(String plateNumber) {
+    public boolean rentCar(String plateNumber, Dates dates) {
         Car car = getCarByPlate(plateNumber);
         if (car != null && !car.isRented()) {
             car.setRented(true);
